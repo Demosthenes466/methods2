@@ -13,16 +13,25 @@ module Methods2
 	
 	# TODO - write ice_cream_party?
 	def ice_cream_party?(ice_cream, candy)
-		if((ice_cream >= 5) & (candy >= 5))
-			return 1
+		if((ice_cream < 5) || (candy < 5))
+			return 0
 		elsif((ice_cream >= (2*candy)) || candy >= (2*ice_cream))
 			return 2
-		elsif((ice_cream < 5) || (candy < 5))
-			return 0
+		elsif((ice_cream >= 5) & (candy >= 5))
+			return 1
 		end
 	end
 
-	
+	def squirrel_party?(nuts, week_day)
+		if (week_day && ((40 <= nuts) && (nuts <= 60)))
+			return true
+		elsif (!week_day && (nuts >= 40))
+			return true
+		else
+			return false
+		end
+	end
+
 	# TODO - write successful_squirrel_party?
 	
 	# TODO - write ticket
