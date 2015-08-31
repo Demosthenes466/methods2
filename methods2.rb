@@ -22,6 +22,8 @@ module Methods2
 		end
 	end
 
+# TODO - write successful_squirrel_party?
+
 	def squirrel_party?(nuts, week_day)
 		if (week_day && ((40 <= nuts) && (nuts <= 60)))
 			return true
@@ -32,9 +34,10 @@ module Methods2
 		end
 	end
 
-	# TODO - write successful_squirrel_party?
-	
 	# TODO - write ticket
+
+	def ticket?(a, b, c)
+		if(a+b)
 
 	# TODO - write in_order?
 
