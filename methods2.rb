@@ -62,9 +62,18 @@ module Methods2
 			return false
 		end
 	end
-	
+
 
 	# TODO - write fizz_string
+
+	def fizz_string(F, B, str)
+		str = str[]
+		if("str".byteslice(0) == "f")
+			return true
+		elsif("str".byteslice(-1) == "b")
+			return true
+		elsif(str[0])
+
 
 	# TODO - write first_last_six?
 
