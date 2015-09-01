@@ -39,4 +39,12 @@ class Methods2Test < MiniTest::Test
 		assert_equal true, @m.squirrel_party?(61, false)
 		assert_equal false, @m.squirrel_party?(61, true)
 	end
+
+	def test_in_order
+		assert_equal true, @m.in_order?(1, 2, 3, false)
+		assert_equal true, @m.in_order?(3, 2, 4, true)
+		assert_equal false, @m.in_order?(3, 2, 4, false)
+		assert_equal false, @m.in_order?(1, 2, 1, false)
+	end
+
 end

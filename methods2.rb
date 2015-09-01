@@ -36,10 +36,19 @@ module Methods2
 
 	# TODO - write ticket
 
-	def ticket?(a, b, c)
-		if(a+b)
+	# def ticket?(a, b, c)
+	# 	if(a+b)
 
 	# TODO - write in_order?
+	def in_order?(a, b, c, bOK)
+		if(b > a && c > b)
+			return true
+		elsif(bOK && c > b)
+			return true
+		else 
+			return false
+		end
+	end
 
 	# TODO - write less_by_ten?
 	
