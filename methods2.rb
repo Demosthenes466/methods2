@@ -51,7 +51,19 @@ module Methods2
 	end
 
 	# TODO - write less_by_ten?
+	def less_by_ten?(a, b, c)
+		if((a >= b + 10) || (a <= b-10))
+			return true
+		elsif((b >= c + 10) || (b <= c-10))
+			return true
+		elsif((c >= a + 10) || (c <= a-10))
+			return true	
+		else 
+			return false
+		end
+	end
 	
+
 	# TODO - write fizz_string
 
 	# TODO - write first_last_six?

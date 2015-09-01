@@ -47,4 +47,11 @@ class Methods2Test < MiniTest::Test
 		assert_equal false, @m.in_order?(1, 2, 1, false)
 	end
 
+	def test_less_by_ten
+		assert_equal true, @m.less_by_ten?(0, 10, 7)
+		assert_equal false, @m.less_by_ten?(0, 8, 7)
+		assert_equal true, @m.less_by_ten?(0, 18, 8)
+		assert_equal true, @m.less_by_ten?(100, 110, 9)
+	end
+
 end
