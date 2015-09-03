@@ -54,4 +54,44 @@ class Methods2Test < MiniTest::Test
 		assert_equal true, @m.less_by_ten?(100, 110, 9)
 	end
 
+	def test_double23
+		assert_equal false, @m.double23?(0,1)
+		assert_equal true, @m.double23?(2,2)
+		assert_equal true, @m.double23?(3,3)
+		assert_equal false, @m.double23?(0,0)
+		assert_equal false, @m.double23?(2,0)
+		assert_equal false, @m.double23?(2,3)
+	end
+
+	def test_fizz_string
+		assert_equal "Fizz", @m.fizz_string("frogs")
+		assert_equal "Fizz", @m.fizz_string("fluster")
+		assert_equal "Buzz", @m.fizz_string("jb")
+		assert_equal "FizzBuzz", @m.fizz_string("fib")
+		assert_equal "ruby", @m.fizz_string("rooster")
+		assert_equal "code", @m.fizz_string("code")
+	end
+
+	def test_first_last_six
+		assert_equal true, @m.first_last_six?(2, 5, 1, 6)
+		assert_equal true, @m.first_last_six?(6, 1, 9, 5)
+		assert_equal true, @m.first_last_six?(6, 1, 9, 6)
+		assert_equal false, @m.first_last_six?(1, 2, 3, 4)
+		assert_equal false, @m.first_last_six?(5, 6, 7, 8)
+	end
+
+	def test_rotate_left
+		assert_equal [2, 3, 4, 1], @m.rotate_left(1, 2, 3, 4)
+		assert_equal [5, 7, 9, 3], @m.rotate_left(3, 5, 7, 9)
+	end
+
+	def test_ticket
+		assert_equal 10, @m.ticket?(7, 3, 5)
+		assert_equal 10, @m.ticket?(2, 8, 3)
+		assert_equal 10, @m.ticket?(10, 0, 0)
+		assert_equal 0, @m.ticket?(3, 3, 3)
+		assert_equal 0, @m.ticket?(4, 5, 4)
+		assert_equal 5, @m.ticket?(12, 3, 2)
+		assert_equal 5, @m.ticket?(1, 12, 2)
+	end
 end
